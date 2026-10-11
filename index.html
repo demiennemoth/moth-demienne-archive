@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Moth Demienne Archive — a personal index of links, projects, and fragments.">
+<title>MOTH DEMIENNE ARCHIVE</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=UnifrakturCook:wght@700&display=swap');
+:root{--black:#050505;--white:#f2f0eb;--grey:#a6a39e;--line:#77736e;--mono:'Special Elite','Courier New',monospace;--goth:'UnifrakturCook',Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:var(--mono);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,calc(100% - 44px));margin:auto}
+.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid #555;font-size:10px;letter-spacing:.22em;text-transform:uppercase;gap:16px}
+.top .right{color:var(--grey);text-align:right}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;padding:76px 0 54px;align-items:center;position:relative}
+.kicker{font-size:10px;letter-spacing:.24em;color:var(--grey);text-transform:uppercase}
+h1{font-family:var(--goth),Georgia,serif;font-size:clamp(68px,11vw,150px);font-weight:400;line-height:.7;letter-spacing:-.055em;margin:32px 0 30px;text-shadow:2px 1px 0 #777}
+h1 span{display:block;margin:18px 0 0 25px;font-size:.73em;letter-spacing:-.04em}
+.subtitle{margin-left:28px;max-width:330px;color:#c7c4be;line-height:1.65;font-size:13px}
+.star{font-size:26px;display:inline-block;animation:turn 28s linear infinite}
+.hero-mark{position:absolute;right:2%;top:5%;font-size:clamp(110px,22vw,270px);line-height:1;color:#f2f0eb0b;pointer-events:none;transform:rotate(-13deg)}
+.collage{height:390px;position:relative;overflow:hidden;border:1px solid #4b4946;background:repeating-linear-gradient(135deg,#0b0b0b 0 3px,#151515 3px 4px)}
+.collage:before{content:"";position:absolute;width:290px;height:290px;border:2px solid #f2f0eb;left:22%;top:12%;border-radius:50%;background:repeating-radial-gradient(ellipse at center,transparent 0 8px,#f2f0eb 9px 10px,transparent 11px 17px);transform:rotate(-24deg);opacity:.82}
+.collage:after{content:"✳  ✝  ✳";position:absolute;bottom:20px;left:15px;font-size:20px;letter-spacing:22px}
+.tape{position:absolute;top:22px;left:-25px;transform:rotate(-8deg);padding:8px 32px;background:var(--white);color:#050505;font-size:10px;letter-spacing:.2em}
+.eye{position:absolute;right:22px;top:35px;font-size:68px;filter:grayscale(1);transform:rotate(9deg)}
+.scribble{position:absolute;right:20px;bottom:70px;font-family:var(--goth);font-size:44px;transform:rotate(-9deg)}
+.rule{border:0;border-top:1px solid #595652;margin:12px 0 25px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-bottom:16px}
+h2{font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.count{font-size:10px;color:var(--grey)}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.link{position:relative;min-height:78px;display:grid;grid-template-columns:36px 1fr 24px;align-items:center;gap:12px;padding:13px 16px;border:1px solid #5d5a56;background:#070707;clip-path:polygon(1% 0,99% 2%,100% 88%,97% 100%,0 96%,2% 8%);transition:background .18s,color .18s,transform .18s}
+.link:before{content:"";position:absolute;left:0;right:0;top:4px;border-top:1px dashed #5a5753;opacity:.65}
+.link:hover{background:var(--white);color:#050505;transform:translateY(-2px)}
+.icon{font-size:20px;text-align:center}
+.name{font-family:var(--goth),Georgia,serif;font-size:26px;letter-spacing:.02em}
+.desc{font-size:9px;letter-spacing:.08em;color:var(--grey);margin-top:5px}
+.link:hover .desc{color:#444}
+.arrow{font-size:22px;text-align:right}
+.about{display:grid;grid-template-columns:.65fr 1.35fr;gap:30px;padding:64px 0 58px}
+.about h2{margin-top:0}
+.about p{max-width:590px;color:#c4c0ba;font-size:13px;line-height:1.85;margin:0}
+.about strong{color:var(--white);font-weight:400}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid #5d5a56;border-bottom:1px solid #5d5a56;padding:28px 0;margin-bottom:52px}
+.contact p{color:var(--grey);font-size:11px;line-height:1.7}
+.button{border:1px solid var(--white);padding:14px 22px;letter-spacing:.15em;text-transform:uppercase;font-size:10px;white-space:nowrap;transition:.2s}
+.button:hover{background:var(--white);color:var(--black)}
+footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 0 30px;color:#888;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+footer span:last-child{color:#555}
+@keyframes turn{to{transform:rotate(360deg)}}
+@media(max-width:760px){.wrap{width:calc(100% - 28px)}.top{font-size:8px}.hero{grid-template-columns:1fr;gap:32px;padding:56px 0 40px}h1{font-size:clamp(72px,17vw,120px)}.collage{height:280px}.collage:before{width:220px;height:220px}.links{grid-template-columns:1fr}.about{grid-template-columns:1fr;gap:12px;padding:45px 0}.contact{align-items:flex-start;flex-direction:column}.button{align-self:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a href="#" aria-label="Home">MOTH DEMIENNE ARCHIVE</a><span class="right">same soul&nbsp; / &nbsp;different platforms&nbsp; / &nbsp;one archive</span></header>
+<main>
+<section class="hero">
+<div class="hero-mark" aria-hidden="true">✳</div>
+<div>
+<div class="kicker"><span class="star">✳</span> personal internet residue</div>
+<h1>Moth<span>Demienne</span></h1>
+<p class="subtitle">A place for my thoughts, links, projects and everything that lives outside of me.</p>
+</div>
+<div class="collage" aria-label="Abstract black and white psychedelic collage">
+<div class="tape">NOT FOR EVERYONE</div><div class="eye">◉</div><div class="scribble">no signal</div>
+</div>
+</section>
+<hr class="rule">
+<section id="links">
+<div class="section-head"><h2>Find me elsewhere</h2><span class="count">[ 01 — 08 ]</span></div>
+<nav class="links" aria-label="Social media links">
+<!-- Replace # with your actual profile URLs -->
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">↗</span><span><span class="name">Telegram</span><div class="desc">channel / personal fragments</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">◎</span><span><span class="name">Instagram</span><div class="desc">images / daily traces</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">♪</span><span><span class="name">TikTok</span><div class="desc">short transmissions</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">▶</span><span><span class="name">YouTube</span><div class="desc">moving images</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">⌘</span><span><span class="name">Pinterest</span><div class="desc">collected obsessions</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">𝕏</span><span><span class="name">X / Twitter</span><div class="desc">unfinished thoughts</div></span><span class="arrow">↗</span></a>
+<a class="link" href="#" target="_blank" rel="noopener noreferrer"><span class="icon">⌘</span><span><span class="name">GitHub</span><div class="desc">projects / digital debris</div></span><span class="arrow">↗</span></a>
+<a class="link" href="mailto:your@email.com"><span class="icon">✉</span><span><span class="name">Email</span><div class="desc">direct correspondence</div></span><span class="arrow">↗</span></a>
+</nav>
+</section>
+<section class="about" id="about">
+<h2><span class="star">✳</span> About this archive</h2>
+<p>This is a personal space, a digital archive of my presence online. Here you'll find links to my social media, projects, thoughts and other fragments of my internet life. <strong>Not a brand. Just me.</strong> A little order inside the static.</p>
+</section>
+<section class="contact" id="contact"><div><h2>Contact / correspondence</h2><p>For collaboration, questions or just to say hi.<br>Some things are better sent directly.</p></div><a class="button" href="mailto:your@email.com">Write me&nbsp; ↗</a></section>
+</main>
+<footer><span>© Moth Demienne · personal archive</span><span>made of noise & persistence</span></footer>
+</div>
+</body>
+</html>
